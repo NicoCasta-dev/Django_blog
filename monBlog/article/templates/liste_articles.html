@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Liste d'articles
+{% endblock %}
+
+{% block content %}
+    <h1>Liste des articles : </h1>
+    <ul>
+        {% for article in articles %}
+            <li> Titre : {{ article.titre}}, Auteur : {{article.auteur }}, Contenu :{{ article.contenu }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
