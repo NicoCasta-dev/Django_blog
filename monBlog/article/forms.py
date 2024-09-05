@@ -6,6 +6,9 @@ class Creer_Article_Form(ModelForm):
     class Meta:
         model = Article
         fields = '__all__'
+        widgets = {
+            'date': forms.DateInput(format='%d/%m/%Y', attrs={'type': 'date'}),
+        }
 
 class Supprimer_Article_Form(forms.Form):
     class Meta:

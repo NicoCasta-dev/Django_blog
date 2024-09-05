@@ -20,13 +20,13 @@ def creer_article(request):
             form.save()
             return redirect('liste_articles')
     
-    return render(request, 'ajout.html', {'form': Creer_Article_Form})
+    return render(request, 'ajout.html', {'form': Creer_Article_Form, 'title': 'Créer un article'})
 
-# def supprimer_article(request):
-#     form = Supprimer_Article_Form
+def supprimer_article(request):
+    form = Supprimer_Article_Form
 
-#     if request.method == 'GET':
-#         return render(request, 'supprimer.html', {'form': form})
+    if request.method == 'GET':
+        return render(request, 'supprimer.html', {'form': form})
     
-    #if request.method == 'POST':
+    # if request.method == 'POST':
     
