@@ -9,8 +9,9 @@ class Author(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=100)
-    author = models.ForeignKey(Author, on_delete=models.RESTRICT)
     content = models.TextField()
+    date_publication = models.DateField()
+    author = models.ForeignKey(Author, on_delete=models.RESTRICT)
 
     def __str__(self):
         return self.title + ' ' + self.author.first_name + ' ' + self.author.last_name

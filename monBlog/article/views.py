@@ -1,26 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .forms import Creer_Article_Form, Supprimer_Article_Form
+from . import models
 
-def accueil(request):
-    return HttpResponse('Bienvenue sur mon blog')
 
 def liste_articles(request):
-    articles = [
-        {'titre': 'Article 1', 'auteur': 'Michel', 'contenu': 'contenu de mon article 1'},
-        {'titre': 'Article 2', 'auteur': 'Johnny', 'contenu': 'contenu de mon article 2'},
-        {'titre': 'Article 3', 'auteur': 'René', 'contenu': 'contenu de mon article 3'},
-    ]
+    articles = models.Article.objects.all
     return render(request, 'liste_articles.html', {'articles': articles})
 
-def contact(request):
-    return render(request, 'contact.html')
-
 def article_detail(request, pk):
-    article = [
-        {'titre': 'Article 1', 'auteur': 'Michel', 'contenu': 'contenu de mon article 1'},
-        {'titre': 'Article 2', 'auteur': 'Johnny', 'contenu': 'contenu de mon article 2'},
-        {'titre': 'Article 3', 'auteur': 'René', 'contenu': 'contenu de mon article 3'},
-    ]
+    article = models.Article.objects.get(id = pk)
 
     return render(request, 'article_detail.html', {'article': article})
 
+def creer_article(request):
+    if request.method == 'POST':
+        form = Creer_Article_Form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('liste_articles')
+    
+    return render(request, 'ajout.html', {'form': Creer_Article_Form})
+
+# def supprimer_article(request):
+#     form = Supprimer_Article_Form
+
+#     if request.method == 'GET':
+#         return render(request, 'supprimer.html', {'form': form})
+    
+    #if request.method == 'POST':
+    

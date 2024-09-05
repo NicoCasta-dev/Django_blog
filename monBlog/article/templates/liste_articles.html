@@ -8,7 +8,9 @@
     <h1>Liste des articles : </h1>
     <ul>
         {% for article in articles %}
-            <li> Titre : {{ article.titre}}, Auteur : {{article.auteur }}, Contenu :{{ article.contenu }}</li>
+            <a href="{% url 'article_detail' article.id %}"> 
+            <li> Titre : {{ article.title}}, Auteur : {{article.author }}, Contenu :{{ article.content }}</li>
+            </a>
         {% endfor %}
     </ul>
 {% endblock %}
