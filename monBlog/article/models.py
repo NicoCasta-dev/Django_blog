@@ -10,6 +10,7 @@ class Author(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
+    # date_publication = models.DateField()(format='%d/%m/%Y', attrs={'type': 'date'})
     author = models.ForeignKey(Author, on_delete=models.RESTRICT)
 
     def __str__(self):

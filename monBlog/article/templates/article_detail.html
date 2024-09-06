@@ -9,4 +9,12 @@
     <h2>Auteur : {{ article.author }}</h2>
     <p>{{ article.content }}</p>
     <p>{{ article.date }}</p>
+
+    <form action = "{% url 'modifier_article' article.id %}">
+    <button type="submit"> Modifier </button>
+    </form>
+
+    <form action = "{% url 'supprimer_article' article.id %}">
+    <button type="submit"> Supprimer </button>
+    </form>
 {% endblock %}

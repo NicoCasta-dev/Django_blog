@@ -9,7 +9,7 @@
     <ul>
         {% for article in articles %}
             <a href="{% url 'article_detail' article.id %}"> 
-            <li> Titre : {{ article.title}}, Auteur : {{article.author }}, Contenu :{{ article.content }}</li>
+            <li> Titre : {{ article.title}}, Auteur : {{article.author }}</li>
             </a>
         {% endfor %}
     </ul>
