@@ -1,0 +1,10 @@
+.h1 {
+    color: red;
+    padding-left:  30px;
+    padding-top: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+

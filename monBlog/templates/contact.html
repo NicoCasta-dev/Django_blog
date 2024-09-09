@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/styles_contact.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h1>Contact</h1>
+    <hr>
+    <div class="container-h1">
+        <h1>Contact</h1>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"></label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nom@email.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Écrivez votre message ici" rows="3"></textarea>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="btn"> Envoyer </button>
+      </div>
 {% endblock %}  

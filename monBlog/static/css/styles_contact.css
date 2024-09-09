@@ -1,0 +1,41 @@
+.container-h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 75%;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.form-label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    padding: 0.1rem 1.25rem;
+}
+
+.btn {
+    width: 15%;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    padding: 0.2rem 1.25rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    cursor: pointer;
+    
+}

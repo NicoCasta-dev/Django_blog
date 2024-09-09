@@ -1,0 +1,74 @@
+.form-floating > input[id="title"] {
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}   
+
+.form-floating > input[id="content"] {
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.form-floating > input[id="auteur"] {
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.form-floating > input[type="date"] {
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.custom-height {
+    width: 75%;
+    height: 25rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.custom-sm {
+    height: 1rem;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.btn {
+    width: 15%;
+    height: 2rem;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.form-select {
+    width: 25%;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}

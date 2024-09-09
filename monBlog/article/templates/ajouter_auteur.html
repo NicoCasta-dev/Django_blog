@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/styles_auteur.css' %}">
+{% endblock %}
+
 {% block title %} Ajouter auteur {% endblock %}
 
 {% block content %}
 <form method="POST">
 {% csrf_token %}
 
-{{form.as_p}}
+<div class="container-auteur">
+    <hr>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control custom-sm" id="first_name" name="first_name" placeholder="Prénom">
+        <label for="first_name">Nom</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control custom-sm" id="last_name" name="last_name" placeholder="Nom">
+        <label for="last_name">Prénom</label>
+    </div>
+<div>
 
-<button type="submit"> Envoyer </button>
+<div class="button-container">
+    <button type="submit" class="btn"> Ajouter</button>
+</div>
 
 </form>
 {% endblock %}

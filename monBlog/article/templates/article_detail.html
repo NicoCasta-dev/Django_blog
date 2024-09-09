@@ -1,21 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/styles_detail.css' %}">
+{% endblock %}
 
 {% block title %}
     Article : {{ article.title }}
 {% endblock %}
 
 {% block content %}
-    <h1>Titre : {{ article.title }}</h1>
-    <h2>Auteur : {{ article.author }}</h2>
-    <p>{{ article.content }}</p>
+    <hr>
+    <div>
+        <img src="{% static 'images/MainAfter.png' %}" class="img-fluid img-max-width mb-3" alt="...">
+    </div>
+
+    <div class="container-titre">
+        <h1>{{ article.title }}</h1>
+    </div>
+    
+    <hr>
+
+    <div class="container-contenu">
+        <p>{{ article.content }}</p>
+    </div>
+
     <p>{{ article.date }}</p>
 
-    <form action = "{% url 'modifier_article' article.id %}">
-    <button type="submit"> Modifier </button>
-    </form>
-    <br>
+    <div class="container-auteur">
+        <p>Auteur : {{ article.author }}</p>
+    </div>
 
-    <form action = "{% url 'supprimer_article' article.id %}">
-    <button type="submit"> Supprimer </button>
-    </form>
+    <div class="container-boutton">
+        <form action = "{% url 'modifier_article' article.id %}">
+        <button type="submit"> Modifier </button>
+        </form>
+
+        <form action = "{% url 'supprimer_article' article.id %}">
+        <button type="submit"> Supprimer </button>
+        </form>
+    </div>
 {% endblock %}
